@@ -1,1 +1,25 @@
+#include <iostream>
+#include<stdio.h>
+using namespace std;
 
+struct Rectangle{
+    int length;
+    int breadth;
+};
+
+int main()
+{
+    struct Rectangle *p; // when a pointer is declared, it is created inside the stack
+                            //how to create an object in heap
+// p=(struct Rectangle *)malloc(sizeof(struct Rectangle)); //or p=(struct Rectangle *) malloc(8);
+                            //a rectangle object will be created in heap and a pointer will be pointing to it
+                            
+//for dynamic allocation in C++:
+p=new Rectangle; // this is how to allocate memory in C++, memory in heap
+p->length=10;
+p->breadth=5;
+
+cout<<p->length<<endl;
+cout<<p->breadth<<endl;
+
+}
