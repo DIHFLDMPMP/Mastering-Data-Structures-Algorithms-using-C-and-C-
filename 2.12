@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a=10;
+    int &r=a; // & is a reference, which is an alias
+    int b=30;
+    r=b;
+    int c=3;
+    r=c;
+    
+    cout<<a<<endl<<r<<endl; // this prints   3   3  
+
+    return 0;
+}
